@@ -13,6 +13,7 @@ class myHandler(BaseHTTPRequestHandler):
 		self.end_headers()
 		f = open(curdir + sep + 'logo.png')
 		self.wfile.write(f.read())
+		self.wfile.write(b'Hello, Python!')
 		return
 
 try:
